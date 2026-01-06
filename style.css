@@ -131,54 +131,136 @@ iframe {
     margin-left: auto;
 }
 
+/* 게시판 전체 컨테이너 */
 .board {
-    background-color: #fff9;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    padding: 30px 40px;
+    width: 480px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* 상단 헤더 (제목 + 더보기) */
+.board_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.board_header h3 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.btn_more {
+    text-decoration: none;
+    color: #666;
+    font-size: 13px;
+    background: #fff;
+    padding: 4px 12px;
     border-radius: 20px;
-    padding: 15px;
-    width: 450px;
-    margin-bottom: 10px;
+    border: 1px solid #eee;
 }
 
-.board input:checked+label {
-    color: #A54545;
-    font-weight: bold;
+/* 탭 스타일 */
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    /* 내용이 아래로 떨어지게 설정 */
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
 }
 
-.board .content {
+.tabs input[type="radio"] {
     display: none;
 }
 
-.board #t1:checked~.b1 {
-    display: block;
+/* 실제 라디오 버튼은 숨김 */
+
+.tabs label {
+    font-size: 16px;
+    color: #999;
+    cursor: pointer;
+    margin-right: 25px;
+    transition: 0.3s;
+    position: relative;
+    padding-bottom: 10px;
 }
 
-.board #t2:checked~.b2 {
-    display: block;
+/* 탭 클릭 시 글자 색상 및 아래 강조선 */
+.tabs input:checked+label {
+    color: #A54545;
+    /* 피그마에 지정된 강조 색상 */
+    font-weight: 700;
 }
 
-.board #t3:checked~.b3 {
-    display: block;
+.tabs input:checked+label::after {
+    content: "";
+    position: absolute;
+    bottom: -11px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #A54545;
 }
 
-.board #t4:checked~.b4 {
+/* 내용(ul) 숨기기 및 선택 시 보여주기 */
+.content {
+    display: none;
+    /* 기본적으로 모두 숨김 */
+    width: 100%;
+    margin-top: 20px;
+}
+
+#t1:checked~.b1,
+#t2:checked~.b2,
+#t3:checked~.b3,
+#t4:checked~.b4 {
     display: block;
+    /* 체크된 버튼에 해당하는 클래스만 노출 */
+}
+
+/* 리스트 항목 정렬 */
+.content li {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px dashed #eee;
+}
+
+.content li .txt {
+    width: 75%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* 글자가 길면 ... 처리 */
+}
+
+.content li .date {
+    color: #aaa;
+    font-size: 13px;
 }
 
 /* 검색 섹션 배경 (반투명 + 그림자) */
 .search {
     background-color: rgba(255, 255, 255, 0.8) !important;
-    backdrop-filter: blur(10px); /* 뒤 배경 흐림 효과 */
+    backdrop-filter: blur(10px);
+    /* 뒤 배경 흐림 효과 */
     border-radius: 30px !important;
     padding: 30px 40px !important;
     width: 450px !important;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
 /* 검색창 테두리 박스 (캐릭터 배치의 기준점) */
 .search_box_wrapper {
-    position: relative; /* 중요: 캐릭터 위치의 기준이 됨 */
+    position: relative;
+    /* 중요: 캐릭터 위치의 기준이 됨 */
     display: flex;
-    border: 2px solid #001C69; /* 진한 파란색 테두리 */
+    border: 2px solid #001C69;
+    /* 진한 파란색 테두리 */
     border-radius: 12px;
     background-color: #fff;
     height: 55px;
@@ -195,14 +277,18 @@ iframe {
 
 /* 캐릭터 위치 조정 (피그마 디자인의 핵심) */
 .char_button {
-    position: absolute; /* 자유로운 배치 */
-    right: -10px;  /* 오른쪽 끝으로 이동 */
-    top: -45px;    /* 위로 튀어나오게 설정 */
+    position: absolute;
+    /* 자유로운 배치 */
+    right: -10px;
+    /* 오른쪽 끝으로 이동 */
+    top: -45px;
+    /* 위로 튀어나오게 설정 */
     border: none;
     background: none;
     cursor: pointer;
 }
 
 .char_button img {
-    width: 110px !important; /* 이미지 크기를 키움 */
+    width: 110px !important;
+    /* 이미지 크기를 키움 */
 }
