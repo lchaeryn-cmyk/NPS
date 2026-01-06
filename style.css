@@ -1,58 +1,208 @@
 @charset "utf-8";
 
 /*리셋코드*/
-*{margin:0; padding:0;}
-li{list-style:none;}
-img,iframe{vertical-align:top;}
-
-/*문서전체 공통적으로 적용할 스타일*/
-:root{
-    font-family: "Pretendard Variable";
-    font-size:14px; line-height:1.6; color:#333;
+* {
+    margin: 0;
+    padding: 0;
 }
 
-.inner{max-width:1400px; margin:0 auto;}
+li {
+    list-style: none;
+}
+
+img,
+iframe {
+    vertical-align: top;
+}
+
+/*문서전체 공통적으로 적용할 스타일*/
+:root {
+    font-family: "Pretendard Variable";
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.inner {
+    max-width: 1400px;
+    margin: 0 auto;
+}
 
 
-.header_container1 ul{display:flex;justify-content:flex-end;
-                    font-size:16px; gap:10px;}
+.header_container1 ul {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 16px;
+    gap: 10px;
+}
 
 
-.header_container2{display:flex;justify-content: space-between; margin-top:40px;}
-.guidebook ul{display:flex;}
+.header_container2 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
 
-.gnb{background-color:#001C69;height:50px;margin-top:40px;}
-.gnb ul{display:flex;justify-content:space-between;font-size:18px;font-weight:300;line-height:50px;}
-.gnb a{color:#fff;}
+.guidebook ul {
+    display: flex;
+}
 
-#main_view{background-image:url("./images/background.png");}
-.notice{height:50px; background:#fff8;}
-.notice_icon{display:block; color:#fff; background-color:#001C69; 
-    height:32px; padding:0 15px;; line-height:32px; border-radius:20px; margin-right:20px;
-    font-style:normal;
-    }
-.notice_icon::before{content:""; display:inline-block; margin-right:5px;
-    width:16px; height:16px; border-radius:50%; background-color:#fff;vertical-align:-3px;}
-.notice .inner{display:flex; height:50px; align-items:center;}
-.notice .inner p:last-child{margin-left:auto;}
+.gnb {
+    background-color: #001C69;
+    height: 50px;
+    margin-top: 40px;
+}
+
+.gnb ul {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 50px;
+}
+
+.gnb a {
+    color: #fff;
+}
+
+#main_view {
+    background-image: url("./images/background.png");
+}
+
+.notice {
+    height: 50px;
+    background: #fff8;
+}
+
+.notice_icon {
+    display: block;
+    color: #fff;
+    background-color: #001C69;
+    height: 32px;
+    padding: 0 15px;
+    ;
+    line-height: 32px;
+    border-radius: 20px;
+    margin-right: 20px;
+    font-style: normal;
+}
+
+.notice_icon::before {
+    content: "";
+    display: inline-block;
+    margin-right: 5px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #fff;
+    vertical-align: -3px;
+}
+
+.notice .inner {
+    display: flex;
+    height: 50px;
+    align-items: center;
+}
+
+.notice .inner p:last-child {
+    margin-left: auto;
+}
 
 
 
-.container{background-image:url("./images/background.png");}
+.container {
+    background-image: url("./images/background.png");
+}
 
-.main_view{align-content:center;}
-.search img{width: 80px;}
+.main_view {
+    align-content: center;
+}
 
-.container .inner{display:flex;}
-.main_container{float:right;margin-left:auto;}
-.search{background-color:#fff9;border-radius:20px;padding:15px; width:450px;margin-bottom:10px;margin-top:10px;}
-.board{background-color:#fff9;border-radius:20px;padding:15px; width:450px;margin-bottom:10px;}
+.search img {
+    width: 80px;
+}
 
-.board input:checked + label{color:#A54545;font-weight:bold;}
+.container .inner {
+    display: flex;
+}
 
-.board .content{display:none;}
+.main_container {
+    float: right;
+    margin-left: auto;
+}
 
-.board #t1:checked ~ .b1{display:block;}
-.board #t2:checked ~ .b2{display:block;}
-.board #t3:checked ~ .b3{display:block;}
-.board #t4:checked ~ .b4{display:block;}
+.board {
+    background-color: #fff9;
+    border-radius: 20px;
+    padding: 15px;
+    width: 450px;
+    margin-bottom: 10px;
+}
+
+.board input:checked+label {
+    color: #A54545;
+    font-weight: bold;
+}
+
+.board .content {
+    display: none;
+}
+
+.board #t1:checked~.b1 {
+    display: block;
+}
+
+.board #t2:checked~.b2 {
+    display: block;
+}
+
+.board #t3:checked~.b3 {
+    display: block;
+}
+
+.board #t4:checked~.b4 {
+    display: block;
+}
+
+/* 검색 섹션 배경 (반투명 + 그림자) */
+.search {
+    background-color: rgba(255, 255, 255, 0.8) !important;
+    backdrop-filter: blur(10px); /* 뒤 배경 흐림 효과 */
+    border-radius: 30px !important;
+    padding: 30px 40px !important;
+    width: 450px !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* 검색창 테두리 박스 (캐릭터 배치의 기준점) */
+.search_box_wrapper {
+    position: relative; /* 중요: 캐릭터 위치의 기준이 됨 */
+    display: flex;
+    border: 2px solid #001C69; /* 진한 파란색 테두리 */
+    border-radius: 12px;
+    background-color: #fff;
+    height: 55px;
+    margin-top: 20px;
+}
+
+.search_box_wrapper input {
+    width: 80%;
+    border: none;
+    outline: none;
+    padding-left: 20px;
+    background: transparent;
+}
+
+/* 캐릭터 위치 조정 (피그마 디자인의 핵심) */
+.char_button {
+    position: absolute; /* 자유로운 배치 */
+    right: -10px;  /* 오른쪽 끝으로 이동 */
+    top: -45px;    /* 위로 튀어나오게 설정 */
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.char_button img {
+    width: 110px !important; /* 이미지 크기를 키움 */
+}
