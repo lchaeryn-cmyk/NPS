@@ -137,11 +137,13 @@ iframe {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 15px;            /* 간격 축소 */
+    margin-bottom: 15px;
+    /* 간격 축소 */
 }
 
 .board_header h3 {
-    font-size: 19px;                /* 제목 크기 살짝 축소 */
+    font-size: 19px;
+    /* 제목 크기 살짝 축소 */
     font-weight: 700;
 }
 
@@ -172,10 +174,12 @@ iframe {
 
 /* 5. 탭 메뉴 글자 크기 조정 */
 .tabs label {
-    font-size: 15px;                /* 글자 크기 16px -> 15px */
+    font-size: 15px;
+    /* 글자 크기 16px -> 15px */
     color: #999;
     cursor: pointer;
-    margin-right: 20px;             /* 간격 조정 */
+    margin-right: 20px;
+    /* 간격 조정 */
     padding-bottom: 8px;
 }
 
@@ -233,12 +237,16 @@ iframe {
     font-size: 13px;
 }
 
-.search, .board {
-    width: 440px !important;        /* 너비를 440px로 동일하게 맞춤 */
-    padding: 25px 35px !important;  /* 안쪽 여백을 약간 줄여 크기 축소 */
+.search,
+.board {
+    width: 440px !important;
+    /* 너비를 440px로 동일하게 맞춤 */
+    padding: 25px 35px !important;
+    /* 안쪽 여백을 약간 줄여 크기 축소 */
     background-color: rgba(255, 255, 255, 0.85) !important;
     backdrop-filter: blur(10px);
-    border-radius: 25px !important; /* 둥근 모서리 소폭 조정 */
+    border-radius: 25px !important;
+    /* 둥근 모서리 소폭 조정 */
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
 }
 
@@ -250,7 +258,8 @@ iframe {
     border: 2px solid #001C69;
     border-radius: 10px;
     background-color: #fff;
-    height: 48px;                   /* 높이를 55px에서 48px로 축소 */
+    height: 48px;
+    /* 높이를 55px에서 48px로 축소 */
     margin-top: 15px;
 }
 
@@ -265,20 +274,23 @@ iframe {
 /* 캐릭터 위치 조정 (피그마 디자인의 핵심) */
 .char_button {
     position: absolute;
-    right: -5px;                    /* 위치 살짝 조정 */
-    top: -38px;                     /* 크기가 작아진 만큼 위쪽 여백 조정 */
+    right: -5px;
+    /* 위치 살짝 조정 */
+    top: -38px;
+    /* 크기가 작아진 만큼 위쪽 여백 조정 */
     border: none;
     background: none;
     cursor: pointer;
 }
 
 .char_button img {
-    width: 95px !important;         /* 캐릭터 크기를 110px에서 95px로 축소 */
+    width: 95px !important;
+    /* 캐릭터 크기를 110px에서 95px로 축소 */
 }
 
 /* 1. 섹션 전체: 위 여백을 120px로 크게 띄움 */
 .quick_service {
-    margin-top: 120px !important; 
+    margin-top: 120px !important;
     padding-bottom: 100px;
     clear: both;
 }
@@ -290,6 +302,7 @@ iframe {
     align-items: flex-end;
     margin-bottom: 30px;
 }
+
 .service_header h3 {
     font-size: 28px !important;
     font-weight: 700;
@@ -301,17 +314,20 @@ iframe {
     display: flex;
     gap: 12px;
 }
+
 .tab_btn {
     display: block;
     padding: 10px 28px;
     background: #fff;
-    border: 1px solid #e5e5e5 !important; /* 연한 회색 테두리 고정 */
+    border: 1px solid #e5e5e5 !important;
+    /* 연한 회색 테두리 고정 */
     border-radius: 10px;
     font-size: 16px;
     font-weight: 600;
     color: #666;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    cursor: default; /* 마우스 올려도 변화 없음 */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    cursor: default;
+    /* 마우스 올려도 변화 없음 */
 }
 
 /* 4. 흰색 아이콘 박스 */
@@ -319,8 +335,9 @@ iframe {
     background: #fff;
     border-radius: 40px;
     padding: 60px 40px;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.06);
-    border: none !important; /* 박스 자체의 테두리 제거 */
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.06);
+    border: none !important;
+    /* 박스 자체의 테두리 제거 */
 }
 
 /* 5. 아이콘 리스트 및 '빨간 줄' 완벽 제거 */
@@ -334,10 +351,10 @@ iframe {
 
 .service_list li a {
     /* 모든 종류의 밑줄과 테두리 제거 (핵심!) */
-    text-decoration: none !important; 
+    text-decoration: none !important;
     border: none !important;
     outline: none !important;
-    
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -346,7 +363,7 @@ iframe {
 
 /* 6. 아이콘 크기 추가 축소 (40px) */
 .service_list li img {
-    width: 40px !important; 
+    width: 40px !important;
     height: auto;
     border: none !important;
 }
@@ -363,10 +380,10 @@ iframe {
     border-bottom: none !important;
 }
 
-/* 1. 섹션 전체 레이아웃 */
+/* 섹션 배경 및 여백 */
 .simulation {
     padding: 100px 0;
-    background-color: #f9f9f9; /* 배경색은 디자인에 따라 조절 */
+    background-color: #fff;
 }
 
 .sim_header {
@@ -374,21 +391,20 @@ iframe {
     margin-bottom: 60px;
 }
 
-/* 2. 폰트 사이즈 적용 (요청 사항) */
 .main_tit {
-    font-size: 40px; /* 요청: 40px */
+    font-size: 40px;
     font-weight: 800;
-    color: #000;
     margin-bottom: 15px;
+    color: #000;
 }
 
 .sub_tit {
-    font-size: 30px; /* 요청: 30px */
+    font-size: 30px;
     font-weight: 500;
-    color: #555;
+    color: #666;
 }
 
-/* 3. 카드 그리드 설정 */
+/* 카드 리스트 레이아웃 */
 .sim_list {
     display: flex;
     justify-content: space-between;
@@ -397,51 +413,73 @@ iframe {
 
 .sim_list li {
     flex: 1;
-    height: 280px;
-    border-radius: 30px;
+    height: 300px;
+    /* 상자 높이 */
+    border-radius: 40px;
+    transition: all 0.3s ease;
+    /* 마우스 효과 */
     overflow: hidden;
-    transition: transform 0.3s;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
+/* 마음에 들어 하신 카드별 배경색 */
+.card1 {
+    background-color: #E8F1FF;
+}
+
+.card2 {
+    background-color: #FFF4E5;
+}
+
+.card3 {
+    background-color: #E7F9EF;
+}
+
+/* 마우스 올렸을 때 효과 */
 .sim_list li:hover {
-    transform: translateY(-10px);
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
-/* 4. 카드 내부 요소 정렬 */
 .sim_list li a {
-    display: flex;
-    justify-content: space-between;
-    padding: 40px;
+    display: block;
+    width: 100%;
     height: 100%;
-    text-decoration: none;
     position: relative;
+    /* 자식 요소 배치의 기준 */
+    text-decoration: none !important;
+}
+
+/* 텍스트 박스: 상단 왼쪽에 배치 */
+.txt_box {
+    position: absolute;
+    top: 40px;
+    left: 40px;
 }
 
 .sim_list h3 {
-    font-size: 30px; /* 요청: 30px */
-    color: #333;
-    font-weight: 700;
+    font-size: 30px;
+    color: #222;
     line-height: 1.3;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    font-weight: 700;
 }
 
 .go_btn {
-    font-size: 24px; /* 요청: 24px */
+    font-size: 24px;
     font-weight: 600;
-    color: #001C69;
-    display: inline-block;
-    border-bottom: 2px solid #001C69;
+    color: #333;
+    border-bottom: 2px solid #333;
+    padding-bottom: 2px;
 }
 
-/* 5. 이미지 위치 조절 */
+/* 아이콘 이미지: 하단 오른쪽에 배치 (사진 구조 재현) */
 .sim_list img {
-    width: 120px; /* 이미지 크기는 적절히 조절 */
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    width: 130px;
+    /* 아이콘 크기 적절히 조절 */
     height: auto;
-    align-self: flex-end;
+    border: none !important;
+    /* 혹시 모를 선 제거 */
 }
-
-/* 6. 카드별 배경색 예시 (피그마 디자인에 맞춰 고치세요) */
-.card1 { background-color: #E8F1FF; }
-.card2 { background-color: #FFF4E5; }
-.card3 { background-color: #E7F9EF; }
