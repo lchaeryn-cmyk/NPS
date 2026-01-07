@@ -525,33 +525,12 @@ iframe {
     border-bottom: 3px solid #A54545;
 }
 
-/* 탭 콘텐츠 이미지 사이즈 통일 */
-.tab_content img {
-    /* 기금(c2) 이미지의 크기를 기준으로 전체 이미지 너비를 제한합니다. */
-    width: 100%; 
-    max-width: 850px; /* 기금 이미지 사이즈에 맞춰 수치를 미세 조정하세요 */
-    height: auto;
-    border-radius: 10px;
-    margin: 0 auto;
-    display: block;
-}
-
-/* 특정 파트의 이미지가 유독 크거나 작다면 아래처럼 개별 조정도 가능합니다 */
-.tab_content.c1 img, 
-.tab_content.c3 img, 
-.tab_content.c4 img {
-    /* 기금(c2) 이미지와 눈으로 보기에 가장 비슷해 보이는 비율로 설정 */
-    width: 90%; 
-}
-
-.tab_content img { width: 100%; height: auto; border-radius: 10px; }
-
-/* [핵심] 탭 클릭 시 해당 이미지 노출 */
-#stat1:checked ~ .c1,
-#stat2:checked ~ .c2,
-#stat3:checked ~ .c3,
-#stat4:checked ~ .c4 {
-    display: block;
+/* 콘텐츠 영역 */
+.tab_content {
+    display: none;
+    width: 100%;
+    margin-top: 30px;
+    text-align: center;
 }
 
 /* 캐릭터 위치 (왼쪽 하단에 걸치도록) */
