@@ -425,7 +425,7 @@ iframe {
 /* [수정] 버튼 스타일: #CEFF5D 16% 배경 (연두계열) */
 .btn_calc {
     display: inline-block;
-    background-color: rgba(206, 255, 93, 0.16) !important; /* 연두계열 16% */
+    background-color: #9BC635!important; /* 연두계열 16% */
     color: #000;
     font-size: 24px !important;
     font-weight: 700;
