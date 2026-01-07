@@ -380,45 +380,49 @@ iframe {
     border-bottom: none !important;
 }
 
-/* 섹션 전체 설정 */
+/* 섹션 레이아웃 */
 .simulation {
     padding: 100px 0;
     background-color: #fff;
+    clear: both;
 }
 
 .sim_header {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
 }
 
-.main_tit { font-size: 40px !important; font-weight: 800; color: #000; margin-bottom: 10px; }
+.main_tit { font-size: 40px !important; font-weight: 800; color: #000; margin-bottom: 15px; }
 .sub_tit { font-size: 30px !important; font-weight: 500; color: #666; }
 
-/* 카드 컨테이너 (가로 배열) */
+/* 3개 박스를 가로로 나열 */
 .sim_container {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 30px; /* 박스 사이 간격 */
 }
 
-/* [핵심] 카드 박스 스타일: #CEFF5D 16% 배경 */
+/* 박스 공통 스타일: 배경 #CEFF5D (16%) */
 .card_box {
-    width: 450px;
-    height: 520px;
-    background-color: rgba(254, 147, 10, 0.33) !important; /* #CEFF5D 16% */
+    flex: 1; /* 3개 박스가 동일한 너비를 가짐 */
+    max-width: 450px;
+    height: 550px;
+    background-color: rgba(206, 255, 93, 0.16) !important; 
     border-radius: 40px;
     display: flex;
-    flex-direction: column; /* 세로 방향 나열 */
-    align-items: center;    /* 가로 중앙 정렬 */
-    justify-content: center; /* 세로 중앙 정렬 */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: 40px;
-    box-sizing: border-box;
+    padding: 40px 20px;
+    transition: transform 0.3s ease;
 }
 
-/* 아이콘 이미지 크기 */
+.card_box:hover { transform: translateY(-10px); }
+
+/* 아이콘 이미지 */
 .icon_img img {
-    width: 130px;
+    width: 140px;
     height: auto;
     margin-bottom: 30px;
 }
@@ -429,31 +433,31 @@ iframe {
     font-weight: 700;
     color: #000;
     margin-bottom: 15px;
+    word-break: keep-all; /* 한글 단어 끊김 방지 */
 }
 
-/* 카드 설명문: 20px 내외 (적절히 조절) */
+/* 카드 설명: 가독성을 위해 크기 조절 */
 .card_txt p {
     font-size: 18px;
     color: #444;
-    line-height: 1.4;
+    line-height: 1.5;
     margin-bottom: 30px;
     word-break: keep-all;
 }
 
-/* [핵심] 버튼 스타일: #FE930A 배경 둥근 사각형 */
+/* 버튼 스타일: 배경 #FE930A (33%) */
 .btn_calc {
     display: inline-block;
-    background-color: #9BC635 !important;
-    color: #fff;
+    background-color: rgba(254, 147, 10, 0.33) !important;
+    color: #000;
     font-size: 24px !important; /* 요청하신 24px */
-    font-weight: 600;
-    padding: 15px 40px;
-    border-radius: 50px; /* 둥근 사각형 */
+    font-weight: 700;
+    padding: 15px 45px;
+    border-radius: 100px;
     text-decoration: none !important;
     transition: 0.3s;
 }
 
 .btn_calc:hover {
-    background-color: #9BC635 !important; /* 호버 시 약간 진하게 */
-    transform: scale(1.05);
+    background-color: rgba(254, 147, 10, 0.5) !important;
 }
