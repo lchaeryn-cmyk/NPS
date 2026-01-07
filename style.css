@@ -443,7 +443,7 @@ iframe {
 /* [핵심] 버튼 스타일: #FE930A 배경 둥근 사각형 */
 .btn_calc {
     display: inline-block;
-    background-color: #FE930A !important;
+    background-color: #9BC635 !important;
     color: #fff;
     font-size: 24px !important; /* 요청하신 24px */
     font-weight: 600;
@@ -454,6 +454,6 @@ iframe {
 }
 
 .btn_calc:hover {
-    background-color: #e68509 !important; /* 호버 시 약간 진하게 */
+    background-color: #9BC635 !important; /* 호버 시 약간 진하게 */
     transform: scale(1.05);
 }
