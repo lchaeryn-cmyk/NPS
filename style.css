@@ -447,6 +447,114 @@ iframe {
 .card_txt p { font-size: 18px; color: #333; line-height: 1.5; margin-bottom: 30px; word-break: keep-all; }
 .icon_img img { width: 130px; height: auto; margin-bottom: 30px; }
 
+/* 현황 섹션 전체 배경 */
+.status_info {
+    padding: 120px 0;
+    background: url("./images/background2.png") no-repeat center/cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.status_main_tit {
+    text-align: center;
+    font-size: 36px !important;
+    color: #fff;
+    margin-bottom: 50px;
+    font-weight: 500;
+}
+
+.status_main_tit span {
+    color: #FFD200; /* 노란색 강조 */
+    font-weight: 800;
+}
+
+/* 흰색 반투명 카드 박스 */
+.status_card {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    padding: 40px 60px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.status_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.status_header h3 { font-size: 24px !important; font-weight: 800; }
+
+.btn_more_status {
+    text-decoration: none;
+    color: #333;
+    background: #fff;
+    padding: 6px 18px;
+    border-radius: 20px;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* 탭 스타일 및 로직 */
+.status_tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+}
+
+.status_tabs input { display: none; }
+
+.status_tabs label {
+    font-size: 26px;
+    font-weight: 700;
+    color: #333;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* [핵심] 탭 클릭 시 글자색 변경 (붉은 계열) */
+#stat1:checked ~ label[for="stat1"],
+#stat2:checked ~ label[for="stat2"],
+#stat3:checked ~ label[for="stat3"],
+#stat4:checked ~ label[for="stat4"] {
+    color: #A54545;
+    border-bottom: 3px solid #A54545;
+}
+
+/* 콘텐츠 영역 */
+.tab_content {
+    display: none;
+    width: 100%;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.tab_content img { width: 100%; height: auto; border-radius: 10px; }
+
+/* [핵심] 탭 클릭 시 해당 이미지 노출 */
+#stat1:checked ~ .c1,
+#stat2:checked ~ .c2,
+#stat3:checked ~ .c3,
+#stat4:checked ~ .c4 {
+    display: block;
+}
+
+/* 캐릭터 위치 (왼쪽 하단에 걸치도록) */
+.char_teaching {
+    position: absolute;
+    left: -120px;
+    bottom: -20px;
+    z-index: 10;
+}
+
+.char_teaching img {
+    width: 280px;
+    height: auto;
+}
 
 /* Footer 공통 스타일 */
 footer {
