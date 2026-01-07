@@ -380,84 +380,69 @@ iframe {
     border-bottom: none !important;
 }
 
-/* 섹션 레이아웃 */
+/* 섹션 전체 설정 */
 .simulation {
     padding: 100px 0;
     background-color: #fff;
-    clear: both;
 }
 
 .sim_header {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
 }
 
-.main_tit { font-size: 40px !important; font-weight: 800; color: #000; margin-bottom: 15px; }
+.main_tit { font-size: 40px !important; font-weight: 800; color: #000; margin-bottom: 10px; }
 .sub_tit { font-size: 30px !important; font-weight: 500; color: #666; }
 
-/* 3개 박스를 가로로 나열 */
+/* 카드 컨테이너 (가로 배열) */
 .sim_container {
     display: flex;
     justify-content: center;
-    gap: 30px; /* 박스 사이 간격 */
+    gap: 30px;
 }
 
-/* 박스 공통 스타일: 배경 #CEFF5D (16%) */
+/* [수정] 카드 박스 스타일: #FE930A 33% 배경 (주황계열) */
 .card_box {
-    flex: 1; /* 3개 박스가 동일한 너비를 가짐 */
+    flex: 1;
     max-width: 450px;
     height: 550px;
-    background-color: rgba(206, 255, 93, 0.16) !important; 
+    background-color: rgba(254, 147, 10, 0.33) !important; /* 주황계열 33% */
     border-radius: 40px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column; 
+    align-items: center;    
+    justify-content: center; 
     text-align: center;
-    padding: 40px 20px;
+    padding: 40px;
+    box-sizing: border-box;
     transition: transform 0.3s ease;
 }
 
-.card_box:hover { transform: translateY(-10px); }
-
-/* 아이콘 이미지 */
-.icon_img img {
-    width: 140px;
-    height: auto;
-    margin-bottom: 30px;
+.card_box:hover {
+    transform: translateY(-10px);
 }
 
-/* 카드 제목: 30px */
-.card_txt h3 {
-    font-size: 30px !important;
-    font-weight: 700;
-    color: #000;
-    margin-bottom: 15px;
-    word-break: keep-all; /* 한글 단어 끊김 방지 */
-}
-
-/* 카드 설명: 가독성을 위해 크기 조절 */
-.card_txt p {
-    font-size: 18px;
-    color: #444;
-    line-height: 1.5;
-    margin-bottom: 30px;
-    word-break: keep-all;
-}
-
-/* 버튼 스타일: 배경 #FE930A (33%) */
+/* [수정] 버튼 스타일: #CEFF5D 16% 배경 (연두계열) */
 .btn_calc {
     display: inline-block;
-    background-color: rgba(254, 147, 10, 0.33) !important;
+    background-color: rgba(206, 255, 93, 0.16) !important; /* 연두계열 16% */
     color: #000;
-    font-size: 24px !important; /* 요청하신 24px */
+    font-size: 24px !important;
     font-weight: 700;
     padding: 15px 45px;
     border-radius: 100px;
     text-decoration: none !important;
     transition: 0.3s;
+    border: 1px solid rgba(206, 255, 93, 0.5); /* 버튼 윤곽을 위해 살짝 추가 */
 }
 
 .btn_calc:hover {
-    background-color: rgba(254, 147, 10, 0.5) !important;
+    background-color: rgba(206, 255, 93, 0.3) !important; /* 호버 시 조금 더 진하게 */
 }
+
+/* 텍스트 및 이미지 스타일 (기존 크기 유지) */
+.main_tit { font-size: 40px !important; font-weight: 800; color: #000; margin-bottom: 15px; text-align: center; }
+.sub_tit { font-size: 30px !important; font-weight: 500; color: #666; text-align: center; margin-bottom: 50px; }
+.card_txt h3 { font-size: 30px !important; font-weight: 700; color: #000; margin-bottom: 15px; }
+.card_txt p { font-size: 18px; color: #333; line-height: 1.5; margin-bottom: 30px; word-break: keep-all; }
+.icon_img img { width: 130px; height: auto; margin-bottom: 30px; }
