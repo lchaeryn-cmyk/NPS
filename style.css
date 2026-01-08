@@ -1182,47 +1182,41 @@ footer {
 
 
 
-/* 1. 두 영역을 가로로 배치하고 간격 조절 */
+/* 메인 컨테이너: 내부 요소들을 수직으로 정렬 */
 .main_container {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    /* 높이가 달라도 상단 정렬 */
-    gap: 40px;
-    /* 두 영역 사이의 여백 */
-    margin-top: 40px;
+    flex-direction: column; /* 위아래 수직 배치 */
+    gap: 60px;             /* "무엇을 도와드릴까요"와 "소식·정보" 사이의 여백 */
+    margin-top: 50px;
+    width: 100%;           /* 전체 너비 사용 */
 }
 
-/* 2. "무엇을 도와드릴까요" 영역을 더 넓게 (약 65% 비율) */
+/* "무엇을 도와드릴까요" 영역 */
 .search {
-    flex: 6.5;
-    background-color: #f8f9fa;
-    /* 배경색이 필요하다면 추가 */
-    padding: 30px;
+    width: 100%;           /* 부모와 동일한 너비 */
+    background-color: #f8f9fa; 
+    padding: 40px;
     border-radius: 15px;
+    box-sizing: border-box; /* 패딩이 너비에 영향을 주지 않도록 설정 */
 }
 
-/* 3. "소식 · 정보" 영역을 좁게 (약 3.5% 비율) */
+/* "소식 · 정보" 영역 */
 .board {
-    flex: 3.5;
-    padding: 10px;
+    width: 100%;           /* 검색 영역과 동일한 너비 */
+    padding: 20px 0;       /* 좌우 패딩은 빼고 위아래 여백만 */
+    box-sizing: border-box;
 }
 
-/* 4. 제목 크기 조정 (마지막 사진 스타일 반영) */
-.search h3,
-.board_header h3 {
-    font-size: 24px;
+/* 제목 스타일 (사진처럼 굵고 크게) */
+.search h3, .board_header h3 {
+    font-size: 26px;
     font-weight: 700;
-    color: #333;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    color: #111;
 }
 
-/* 참고: 검색창 내부 요소가 틀어지지 않게 너비 조정 */
+/* 검색창 너비가 너무 퍼지지 않게 조절하고 싶다면 search_box_wrapper 수정 */
 .search_box_wrapper {
-    width: 100%;
-    display: flex;
-}
-
-.search_box_wrapper input {
-    flex: 1;
+    max-width: 800px;      /* 검색창의 최대 너비 제한 (선택 사항) */
+    margin: 0 auto;        /* 가운데 정렬 */
 }
