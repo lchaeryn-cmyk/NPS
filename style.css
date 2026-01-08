@@ -492,6 +492,255 @@ iframe {
     margin-bottom: 30px;
 }
 
+.favorite-menu-section {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.inner-container-1400 {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-header h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.section-header p {
+    font-size: 18px;
+    color: #333;
+}
+
+.slider-viewport {
+    position: relative;
+    overflow: visible;
+}
+
+/* 화살표가 카드 위에 걸치게 */
+
+.menu-slider {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s ease;
+}
+
+/* 카드 공통 디자인 */
+.menu-card {
+    flex: 0 0 calc((100% - 60px) / 4);
+    /* 한 화면에 4개 배치 */
+    height: 380px;
+    border-radius: 20px;
+    padding: 30px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    background-color: #fffef2;
+    /* 사진의 연노랑 배경 */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.tag {
+    background: #fff;
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    border: 1px solid #eee;
+}
+
+.card-svg {
+    width: 60px;
+    height: 60px;
+}
+
+.card-svg svg {
+    width: 100%;
+    height: 100%;
+}
+
+.card-desc {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: auto;
+}
+
+/* 하단 링크 버튼 */
+.card-links a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    margin-bottom: 8px;
+    padding: 12px 15px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #444;
+}
+
+.card-links a span {
+    color: #999;
+}
+
+/* 슬라이드 화살표 (사진 속 위치) */
+.slide-next-btn {
+    position: absolute;
+    right: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: #444;
+    /* 검정색 원형 */
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.menu-card.empty {
+    background: #fffef2;
+    justify-content: center;
+    align-items: center;
+    color: #ccc;
+}
+
+/* 하단 링크 영역 공통 설정 */
+.card-links {
+    margin-top: auto;
+    /* 설명글 길이에 상관없이 항상 하단에 고정 */
+    width: 100%;
+    /* 카드의 가로 폭을 가득 채움 */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* 버튼 사이의 간격 */
+}
+
+.card-links a {
+    display: flex;
+    justify-content: space-between;
+    /* 텍스트는 왼쪽, 화살표는 오른쪽 끝 */
+    align-items: center;
+    background-color: #fff;
+    padding: 12px 20px;
+    /* 상하 12px, 좌우 20px 여백으로 정렬 통일 */
+    border-radius: 15px;
+    /* 사진과 같은 둥근 모서리 */
+    text-decoration: none;
+    font-size: 15px;
+    color: #333;
+    font-weight: 500;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+    /* 버튼에 아주 연한 그림자 */
+    transition: background 0.2s;
+}
+
+.card-links a:hover {
+    background-color: #fcfcfc;
+}
+
+/* 화살표 아이콘 색상 조절 */
+.card-links a span {
+    color: #999;
+    font-size: 14px;
+}
+
+/* 1. 슬라이더 내 모든 카드의 가로 폭을 강제 통일 */
+.menu-card {
+    flex: 0 0 calc((100% - 60px) / 4) !important;
+    /* 4개 노출 시 1400px 기준 정확히 배분 */
+    height: 420px;
+    /* 세로 높이 고정 */
+    background-color: #fffef2;
+    /* 기본 배경색 통일 */
+    border-radius: 20px;
+    padding: 30px;
+    /* 내부 여백 통일 */
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    /* 패딩이 너비에 영향을 주지 않게 설정 */
+    border: none !important;
+    /* 점선이나 테두리 완전 제거 */
+}
+
+/* 2. 상단 영역 높이 고정 (아이콘 위치 정렬) */
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 75px;
+    /* 모든 카드의 아이콘 영역 높이 통일 */
+    margin-bottom: 20px;
+}
+
+/* 3. 하단 링크 버튼들 너비 100%로 꽉 채우기 */
+.card-links {
+    margin-top: auto;
+    /* 위쪽 내용이 짧아도 버튼은 항상 맨 밑으로 */
+    width: 100%;
+    /* 버튼 영역 가로폭 100% */
+}
+
+.card-links a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    /* 버튼 자체 가로폭 100% */
+    background: #fff;
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #444;
+    box-sizing: border-box;
+    /* 버튼 패딩 정렬 유지 */
+}
+
+/* 4. 5, 6번째 카드 전용 클래스에서 크기 방해 요소 제거 */
+.color-5,
+.color-6 {
+    border: none !important;
+}
+
+.quick-service span {
+    font-weight: 800;
+
+}
+
+.slider-viewport p,
+a,
+span {
+    font-weight: 900;
+}
+
+.slider-viewport span {
+    margin-right: 40px;
+}
+
 /* 현황 섹션 전체 배경 */
 .status_info {
     padding: 120px 0;
