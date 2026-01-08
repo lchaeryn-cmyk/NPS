@@ -1182,32 +1182,36 @@ footer {
 
 
 
-/* 메인 컨테이너: 내부 요소들을 수직으로 정렬 */
+/* 메인 컨테이너 설정 */
 .main_container {
     display: flex;
-    flex-direction: column; /* 위아래 수직 배치 */
-    gap: 60px;             /* "무엇을 도와드릴까요"와 "소식·정보" 사이의 여백 */
+    flex-direction: column; /* 세로 정렬 유지 */
+    align-items: flex-end;  /* 내부 요소들을 오른쪽으로 정렬 */
+    gap: 60px;             /* 검색과 소식 정보 사이의 간격 */
     margin-top: 50px;
-    width: 100%;           /* 전체 너비 사용 */
+    margin-bottom: 80px;    /* [추가] 소식 정보 섹션 아래쪽 여백 */
+    width: 100%;
 }
 
-/* "무엇을 도와드릴까요" 영역 */
-.search {
-    width: 100%;           /* 부모와 동일한 너비 */
-    background-color: #f8f9fa; 
-    padding: 40px;
-    border-radius: 15px;
-    box-sizing: border-box; /* 패딩이 너비에 영향을 주지 않도록 설정 */
-}
-
-/* "소식 · 정보" 영역 */
-.board {
-    width: 100%;           /* 검색 영역과 동일한 너비 */
-    padding: 20px 0;       /* 좌우 패딩은 빼고 위아래 여백만 */
+/* 검색 및 소식 정보 영역의 너비와 스타일 */
+.search, .board {
+    width: 65%;            /* [수정] 오른쪽으로 배치하기 위해 너비를 전체의 약 65%로 설정 */
     box-sizing: border-box;
 }
 
-/* 제목 스타일 (사진처럼 굵고 크게) */
+/* "무엇을 도와드릴까요" 영역 스타일 */
+.search {
+    background-color: #f8f9fa; 
+    padding: 40px;
+    border-radius: 15px;
+}
+
+/* "소식 · 정보" 영역 스타일 */
+.board {
+    padding-bottom: 20px;   /* 내부 하단 여백 */
+}
+
+/* 제목 스타일 */
 .search h3, .board_header h3 {
     font-size: 26px;
     font-weight: 700;
@@ -1215,8 +1219,8 @@ footer {
     color: #111;
 }
 
-/* 검색창 너비가 너무 퍼지지 않게 조절하고 싶다면 search_box_wrapper 수정 */
+/* 검색창 너비 유지 */
 .search_box_wrapper {
-    max-width: 800px;      /* 검색창의 최대 너비 제한 (선택 사항) */
-    margin: 0 auto;        /* 가운데 정렬 */
+    width: 100%;
+    display: flex;
 }
