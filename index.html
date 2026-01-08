@@ -431,31 +431,68 @@
                     <h2>다양한 연금소식을 확인해 보세요!</h2>
                 </div>
 
-                <div class="banner_row1">
-                    <div class="b_box news_box">
-                        <div class="b_head">
-                            <h4>카드뉴스</h4>
-                            <span class="b_page">1 / 3 <i class="ctrl_btns"></i></span>
-                        </div>
-                        <div class="b_img"><img src="./images/news1.png" alt="news1"></div>
-                    </div>
+                <div class="inner">
+                    <div class="sub_content_wrap">
 
-                    <div class="b_box tv_box">
-                        <div class="b_head">
-                            <h4>국민연금 TV</h4>
-                            <span class="b_page">1 / 3 <i class="ctrl_btns"></i></span>
-                        </div>
-                        <div class="b_img"><img src="./images/tv1.png" alt="tv1"></div>
-                    </div>
+                        <section class="card_news slider_section">
+                            <h3>카드뉴스</h3>
+                            <div class="slider_container">
+                                <div class="slider_wrapper">
+                                    <div class="slide"><img src="./images/news1.png" alt="뉴스1"></div>
+                                    <div class="slide"><img src="./images/news2.jpeg" alt="뉴스2"></div>
+                                    <div class="slide"><img src="./images/news3.jpeg" alt="뉴스3"></div>
+                                </div>
+                                <button class="prev_btn" onclick="moveSlide(this, -1)">〈</button>
+                                <button class="next_btn" onclick="moveSlide(this, 1)">〉</button>
+                            </div>
+                        </section>
 
-                    <div class="b_box pop_box">
-                        <div class="b_head">
-                            <h4>팝업존</h4>
-                            <span class="b_page">2 / 4 <i class="ctrl_btns"></i></span>
-                        </div>
-                        <div class="b_img"><img src="./images/pop1.gif" alt="pop1"></div>
+                        <section class="nps_tv slider_section">
+                            <h3>국민연금 TV</h3>
+                            <div class="slider_container">
+                                <div class="slider_wrapper">
+                                    <div class="slide"><img src="./images/tv1.png" alt="TV1"></div>
+                                    <div class="slide"><img src="./images/tv2.png" alt="TV2"></div>
+                                    <div class="slide"><img src="./images/tv3.png" alt="TV3"></div>
+                                </div>
+                                <button class="prev_btn" onclick="moveSlide(this, -1)">〈</button>
+                                <button class="next_btn" onclick="moveSlide(this, 1)">〉</button>
+                            </div>
+                        </section>
+
+                        <section class="popup_zone slider_section">
+                            <h3>팝업존</h3>
+                            <div class="slider_container">
+                                <div class="slider_wrapper">
+                                    <div class="slide"><img src="./images/pop1.gif" alt="팝업1"></div>
+                                    <div class="slide"><img src="./images/pop2.png" alt="팝업2"></div>
+                                    <div class="slide"><img src="./images/pop3.jpeg" alt="팝업3"></div>
+                                </div>
+                                <button class="prev_btn" onclick="moveSlide(this, -1)">〈</button>
+                                <button class="next_btn" onclick="moveSlide(this, 1)">〉</button>
+                            </div>
+                        </section>
+
                     </div>
                 </div>
+
+                <script>
+                    function moveSlide(btn, n) {
+                        const container = btn.closest('.slider_section');
+                        const wrapper = container.querySelector('.slider_wrapper');
+                        const slides = container.querySelectorAll('.slide');
+                        const total = slides.length;
+
+                        // 현재 인덱스 찾기 (데이터 속성 활용)
+                        let currentIdx = parseInt(container.getAttribute('data-index') || '0');
+
+                        currentIdx = (currentIdx + n + total) % total;
+                        wrapper.style.transform = `translateX(-${currentIdx * 100}%)`;
+
+                        // 변경된 인덱스 저장
+                        container.setAttribute('data-index', currentIdx);
+                    }
+                </script>
 
                 <div class="banner_row2">
                     <div class="info_card">
