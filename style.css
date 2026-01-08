@@ -1177,3 +1177,52 @@ footer {
     opacity: 1;
     text-decoration: underline;
 }
+
+
+
+
+
+/* 1. 두 영역을 가로로 배치하고 간격 조절 */
+.main_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    /* 높이가 달라도 상단 정렬 */
+    gap: 40px;
+    /* 두 영역 사이의 여백 */
+    margin-top: 40px;
+}
+
+/* 2. "무엇을 도와드릴까요" 영역을 더 넓게 (약 65% 비율) */
+.search {
+    flex: 6.5;
+    background-color: #f8f9fa;
+    /* 배경색이 필요하다면 추가 */
+    padding: 30px;
+    border-radius: 15px;
+}
+
+/* 3. "소식 · 정보" 영역을 좁게 (약 3.5% 비율) */
+.board {
+    flex: 3.5;
+    padding: 10px;
+}
+
+/* 4. 제목 크기 조정 (마지막 사진 스타일 반영) */
+.search h3,
+.board_header h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* 참고: 검색창 내부 요소가 틀어지지 않게 너비 조정 */
+.search_box_wrapper {
+    width: 100%;
+    display: flex;
+}
+
+.search_box_wrapper input {
+    flex: 1;
+}
