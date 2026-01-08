@@ -36,15 +36,29 @@ iframe {
     gap: 10px;
 }
 
+.header_container1 ul li a {
+    font-size: 16px;
+    font-weight: 300; /* 숫자가 작을수록 얇아집니다 (300: Light) */
+    color: #666;      /* 글자가 얇아지면 흐려보일 수 있어 색상을 잡아줍니다 */
+}
+
 
 .header_container2 {
     display: flex;
     justify-content: space-between;
     margin-top: 40px;
+    align-items: flex-end;
 }
 
 .guidebook ul {
     display: flex;
+}
+
+.guidebook ul li a {
+    font-size: 18px;
+    font-weight: 300; /* 얇은 두께 적용 */
+    text-decoration: none;
+    color: inherit;
 }
 
 .gnb {
@@ -61,16 +75,39 @@ iframe {
     line-height: 50px;
 }
 
+.gnb ul li a {
+    font-size: 24px;
+    font-weight: 300; /* 얇은 두께 적용 */
+    color: #fff;
+    line-height: 50px; /* GNB 높이에 맞춰 수직 중앙 정렬 */
+    display: block;
+}
+
 .gnb a {
     color: #fff;
+}
+
+/* 링크의 색상을 부모 요소와 동일하게 맞추고 밑줄을 제거합니다 */
+a {
+    text-decoration: none; /* 밑줄 제거 */
+    color: inherit;       /* 부모의 글자색을 그대로 상속 (검정색 등) */
+    display: inline-block; /* 필요한 경우 블록 요소로 지정 */
+    font-weight:lighter;
+}
+
+/* 마우스를 올렸을 때도 스타일이 변하지 않게 하려면 */
+a:hover {
+    text-decoration: none;
+    color: inherit;
 }
 
 #main_view {
     background-image: url("./images/background.png");
 }
 
-.main_view h1,h2{font-size: 48px;}
-
+.main_view h1,h2{font-size: 48px; font-weight:300;color:#121212;}
+.main_view .first{font-size:80px; font-weight:400;}
+.main_view .second{font-size:60px;font-weight:400;}
 
 .notice {
     height: 50px;
@@ -144,8 +181,9 @@ iframe {
     /* 간격 축소 */
 }
 
+
 .board_header h3 {
-    font-size: 19px;
+    font-size: 20px;
     /* 제목 크기 살짝 축소 */
     font-weight: 700;
 }
@@ -1226,4 +1264,39 @@ footer {
 .search_box_wrapper {
     width: 100%;
     display: flex;
+}
+
+/* 1. 하단 3개 섹션을 감싸는 컨테이너 */
+.sub_content_wrap { 
+    display: flex;
+    align-items: stretch; /* [핵심] 자식들의 높이를 부모에 맞춰 늘림 */
+    gap: 20px;
+    margin-top: 40px;
+}
+
+/* 2. 각 카드(카드뉴스, TV, 팝업존) 공통 스타일 */
+.card_news, .nps_tv, .popup_zone {
+    flex: 1;             /* [핵심] 3개의 박스가 동일한 너비를 가짐 */
+    display: flex;
+    flex-direction: column; 
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    overflow: hidden;
+    height: auto;        /* 고정 높이 대신 자동 높이 설정 */
+}
+
+/* 3. 내부 이미지나 컨텐츠가 박스 높이에 꽉 차게 조절 */
+.card_news img, .nps_tv .video_thumb, .popup_zone .slide_img {
+    width: 100%;
+    height: 200px;       /* 이미지 영역 높이는 통일하는 것이 깔끔합니다 */
+    object-fit: cover;
+}
+
+/* 4. 안내 및 공지사항 폰트 수정 (이전 요청사항 반영) */
+.board_header ul li a {
+    font-size: 20px;
+    font-weight: 300;
+    color: #666;
+    text-decoration: none;
 }
