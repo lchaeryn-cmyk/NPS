@@ -1189,7 +1189,7 @@ footer {
     align-items: flex-end;  /* 내부 요소들을 오른쪽으로 정렬 */
     gap: 60px;             /* 검색과 소식 정보 사이의 간격 */
     margin-top: 50px;
-    margin-bottom: 80px;    /* [추가] 소식 정보 섹션 아래쪽 여백 */
+    margin-bottom: 50px;    /* [추가] 소식 정보 섹션 아래쪽 여백 */
     width: 100%;
 }
 
